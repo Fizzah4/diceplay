@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22129"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="diceplay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dice-general" translatesAutoresizingMaskIntoConstraints="NO" id="csS-LY-HmI">
+                                <rect key="frame" x="76" y="187" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qzh-vS-Nuh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypq-8a-H2A">
+                                <rect key="frame" x="168" y="409" width="52" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Roll"/>
+                                <connections>
+                                    <action selector="rollDie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7q-cn-e4k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5J-cM-0bv">
+                                <rect key="frame" x="157" y="350" width="75" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Ayw-Em-CPh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ypq-8a-H2A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dy1-om-BT4"/>
+                            <constraint firstItem="csS-LY-HmI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="OJ4-Ls-7TG"/>
+                            <constraint firstItem="B5J-cM-0bv" firstAttribute="centerX" secondItem="ypq-8a-H2A" secondAttribute="centerX" id="a2O-H0-UwS"/>
+                            <constraint firstItem="csS-LY-HmI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="byh-Ia-ZkJ"/>
+                            <constraint firstItem="csS-LY-HmI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dV3-9U-0ZL"/>
+                            <constraint firstItem="B5J-cM-0bv" firstAttribute="top" secondItem="csS-LY-HmI" secondAttribute="bottom" constant="35" id="eGb-xC-7dv"/>
+                            <constraint firstItem="B5J-cM-0bv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="fVN-uZ-KVR"/>
+                            <constraint firstItem="ypq-8a-H2A" firstAttribute="top" secondItem="B5J-cM-0bv" secondAttribute="bottom" constant="31" id="kuQ-xA-dNc"/>
+                            <constraint firstItem="ypq-8a-H2A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="rOf-M3-ocv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dieImage" destination="csS-LY-HmI" id="yTA-jV-icx"/>
+                        <outlet property="dieResult" destination="B5J-cM-0bv" id="FdR-U7-maW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice-general" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
